@@ -18,17 +18,17 @@ class UserSearchScreen extends GetView<UserSearchController> {
           ),
           Expanded(
             child: Obx(
-              () => controller.isLoading.value
+              () => controller.state.isLoading
                   ? const Center(
                       child: CircularProgressIndicator(),
                     )
                   : ListView.builder(
-                      itemCount: controller.users.length,
+                      itemCount: controller.state.users.length,
                       itemBuilder: (context, idx) => ListTile(
-                        title: Text(controller.users[idx].login),
+                        title: Text(controller.state.users[idx].login),
                         leading: CircleAvatar(
                           backgroundImage: NetworkImage(
-                            controller.users[idx].avatarUrl,
+                            controller.state.users[idx].avatarUrl,
                           ),
                         ),
                       ),
