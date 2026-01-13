@@ -45,3 +45,7 @@ app.*.map.json
 /android/app/release
 
 /assets/api_key.env
+
+# freezed, json_serializable, etc.
+*.g.dart
+*.freezed.dart
