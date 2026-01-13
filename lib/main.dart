@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
+import 'package:getx_study/presentation/user_search/user_search_binding.dart';
+import 'package:getx_study/presentation/user_search/user_search_screen.dart';
 
 void main() async {
   runApp(
     GetMaterialApp(
       title: 'GetX Study',
-      home: AddressSearchPage(),
+      home: UserSearchScreen(),
+      initialBinding: UserSearchBinding(),
     ),
   );
 }
