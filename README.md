@@ -29,7 +29,9 @@ lib/
 │       └───search_users_usecase.dart
 └───presentation/
     └───user_search/
+        ├───user_search_action.dart
         ├───user_search_binding.dart
         ├───user_search_controller.dart
-        └───user_search_screen.dart
+        ├───user_search_screen.dart
+        └───user_search_state.dart
 ```
