@@ -6,7 +6,7 @@ import 'package:getx_study/domain/repository/user_repository.dart';
 import 'package:getx_study/domain/usecase/search_users_usecase.dart';
 import 'package:getx_study/presentation/user_search/user_search_controller.dart';
 
-class UserSearchBinding extends Bindings {
+class UserSearchBinding implements Bindings {
   @override
   void dependencies() {
     // DataSource
