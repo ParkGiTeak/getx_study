@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:getx_study/domain/usecase/search_users_usecase.dart';
+import 'package:getx_study/presentation/user_search/user_search_action.dart';
 import 'package:getx_study/presentation/user_search/user_search_state.dart';
 
 import '../../core/result.dart';
@@ -15,7 +16,14 @@ class UserSearchController extends GetxController {
     required this.searchUserUseCase,
   });
 
-  void searchGitHubUsers(String query) async {
+  void onAction(UserSearchAction action) {
+    switch (action) {
+      case SearchUsers():
+        _searchGitHubUsers(action.query);
+    }
+  }
+
+  void _searchGitHubUsers(String query) async {
     if (query.isEmpty) return;
 
     _state.value = _state.value.copyWith(isLoading: true);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_study/presentation/user_search/user_search_action.dart';
 import 'package:getx_study/presentation/user_search/user_search_controller.dart';
 
 class UserSearchScreen extends GetView<UserSearchController> {
@@ -14,7 +15,7 @@ class UserSearchScreen extends GetView<UserSearchController> {
       body: Column(
         children: [
           TextField(
-            onSubmitted: (val) => controller.searchGitHubUsers(val),
+            onSubmitted: (val) => controller.onAction(UserSearchAction.searchUsers(val)),
           ),
           Expanded(
             child: Obx(
