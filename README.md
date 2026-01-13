@@ -1,16 +1,35 @@
 # getx_study
 
-A new Flutter project.
+## Get을 사용하여 CleanArchitecture 구조 개발 연습
+- github Users API를 활용하여 RestAPI 통신
 
-## Getting Started
+## 구조
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+lib/
+├───main.dart
+├───core/
+│   └───result.dart
+├───data/
+│   ├───data_source/
+│   │   ├───github_user_data_source_impl.dart
+│   │   └───github_user_data_source.dart
+│   ├───dto/
+│   │   └───users_dto.dart
+│   ├───mapper/
+│   │   └───user_mapper.dart
+│   └───repository/
+│       └───user_repository_impl.dart
+├───domain/
+│   ├───model/
+│   │   └───user.dart
+│   ├───repository/
+│   │   └───user_repository.dart
+│   └───usecase/
+│       └───search_users_usecase.dart
+└───presentation/
+    └───user_search/
+        ├───user_search_binding.dart
+        ├───user_search_controller.dart
+        └───user_search_screen.dart
+```
